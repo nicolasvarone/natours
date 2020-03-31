@@ -4,7 +4,7 @@
   "description": "Landing page for natours",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+    "compile_sass": "sass sass/main.scss css/style.css --watch"
   },
   "repository": {
     "type": "git",
@@ -15,8 +15,7 @@
   "bugs": {
     "url": "https://github.com/NicolasVarone/natours/issues"
   },
-  "homepage": "https://github.com/NicolasVarone/natours#readme",
   "devDependencies": {
-    "node-sass": "^4.13.1"
+    "sass": "^1.26.3"
   }
 }
