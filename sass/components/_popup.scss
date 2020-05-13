@@ -28,22 +28,35 @@
     transform: translate(-50%, -50%) scale(0.25);
     transition: all 0.5s 0.2s;
   }
-
+  
   &__left {
     width: 33.333333%;
     display: table-cell;
+    
+    @include respond(tab-land) {
+      width: 50%;
+      display: table-row;
+    }
   }
-
+  
   &__right {
     width: 66.666667%;
     display: table-cell;
     vertical-align: middle;
     padding: 3rem 5rem;
   }
-
+  
   &__img {
     display: block;
     width: 100%;
+
+    &:first-child,
+    &:last-child {
+      @include respond(tab-land) {
+        float: left;
+        width: 50%;
+      }
+    }
   }
 
   &__text {
@@ -61,6 +74,11 @@
     -ms-hyphens: auto;
     -webkit-hyphens: auto;
     hyphens: auto;
+
+    @include respond(tab-port) {
+      column-count: 1;
+      hyphens: none;
+    }
   }
 
   // OPEN STATES //

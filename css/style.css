@@ -653,6 +653,12 @@ body {
   width: 33.333333%;
   display: table-cell;
 }
+@media (max-width: 75em) {
+  .popup__left {
+    width: 50%;
+    display: table-row;
+  }
+}
 .popup__right {
   width: 66.666667%;
   display: table-cell;
@@ -662,6 +668,12 @@ body {
 .popup__img {
   display: block;
   width: 100%;
+}
+@media (max-width: 75em) {
+  .popup__img:first-child, .popup__img:last-child {
+    float: left;
+    width: 50%;
+  }
 }
 .popup__text {
   font-size: 1.4rem;
@@ -676,6 +688,12 @@ body {
   -ms-hyphens: auto;
   -webkit-hyphens: auto;
   hyphens: auto;
+}
+@media (max-width: 56.25em) {
+  .popup__text {
+    column-count: 1;
+    hyphens: none;
+  }
 }
 .popup:target .popup__content {
   opacity: 1;
